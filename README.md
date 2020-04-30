@@ -22,7 +22,7 @@ Detailed information on how to interact with Lookerbot [can be found on Looker D
 - (optional) To display chart images, credentials for a supported storage service:
   - [Amazon S3](https://aws.amazon.com/s3/) account, bucket, and access keys
     - [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
-    - The access keys need the `s3:PutObjectAcl` permission.
+    - The access keys need the `s3:PutObjectAcl` and `s3:PutObject` permissions.
   - [Microsoft Azure Storage](https://azure.microsoft.com/en-us/services/storage/) account and access key
       - [Documentation](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/)
   - [Google Cloud Storage](https://cloud.google.com/storage/) account and credentials
@@ -48,6 +48,11 @@ Detailed information on how to interact with Lookerbot [can be found on Looker D
 The quickest way to deploy the bot is to use Heroku's one-click deploy button, which will provision a server for your bot. This will prompt you to give the app a unique name, add the Slack API key and configure all of the required variables (see "Environment Variables" below).
 
 Once the environment variables have been set and the server has been deployed, the bot should be ready to go! You can also optionally [configure slash commands](#configuring-slash-commands).
+
+> **Troubleshooting**
+>
+> See dependency issues on heroku?
+> Apply `YARN_PRODUCTION=false` as env. to the deployment. See [heroku skip-pruning](https://devcenter.heroku.com/articles/nodejs-support#skip-pruning) for more details.
 
 #### Manual Deployment
 
